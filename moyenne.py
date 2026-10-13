@@ -2,8 +2,8 @@
 
 # NB: Ce fichier contient du code à compléter
 
-from rich.markdown import Markdown
 from rich.console import Console
+from rich.markdown import Markdown
 
 
 def moyenne(valeurs):
@@ -23,11 +23,9 @@ def moyenne(valeurs):
     ---
     """
     if not valeurs:
-        return 'ValueError'
-    else:
-        n=len(valeurs)
-        return sum(valeurs)/n
-   
+        raise ValueError("la liste est vide")
+    n = len(valeurs)
+    return sum(valeurs) / n
 
 
 if __name__ == "__main__":
